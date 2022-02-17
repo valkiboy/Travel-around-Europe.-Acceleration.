@@ -1,0 +1,14 @@
+.page-body {
+  font-family: "Montserrat", "Arial", sans-serif;
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 400;
+  color: #2C2E3F;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
