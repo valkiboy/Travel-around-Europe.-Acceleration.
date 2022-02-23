@@ -1,0 +1,136 @@
+.main-nav {
+  min-width: 320px;
+  min-height: 568px;
+
+  @media (min-width: 1920px) {
+    min-height: 100px;
+  }
+}
+
+.main-nav__list {
+  list-style: none;
+  padding: 134px 0 0 0;
+  margin: 0;
+
+  @media (min-width: 1920px) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1920px;
+    min-height: 100px;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0;
+  }
+}
+
+.main-nav__item {
+  position: relative;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  background-color: rgb(251, 248, 248);
+  margin-bottom: 30px;
+
+  @media (min-width: 1920px) {
+    background-color: inherit;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    width: 130px;
+    margin-right: 26px;
+  }
+}
+
+.main-nav__item a {
+  display: block;
+  min-width: 320px;
+  min-height: 60px;
+  padding: 15px 35px 17px 16px;
+  box-sizing: border-box;
+  cursor: pointer;
+  color: rgba(72, 73, 77, 1);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 23px;
+    right: 24px;
+    width: 8px;
+    height: 12px;
+    background-image: url("../img/shape.svg");
+
+    @media (min-width: 1920px) {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    padding: 23px 20px 15px 23px;
+    color: rgba(20, 21, 23, 1);
+    min-width: 170px;
+
+    &:hover {
+      color: rgba(254, 120, 101, 1);
+    }
+  }
+}
+
+.main-nav__item-tel {
+  display: none;
+
+  @media (min-width: 1920px) {
+    display: block;
+    position: relative;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    min-width: 250px;
+    margin-right: 333px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: -17px;
+      width: 19px;
+      height: 23px;
+      background-image: url("../img/phone-desktop.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &:hover::after {
+      background-image: url("../img/phone-red.svg");
+    }
+  }
+}
+
+.main-nav__item-tel a {
+  @media (min-width: 1920px) {
+    padding: 17px 17px 12px 20px;
+  }
+}
+
+.main-nav__link {
+  @media (min-width: 1920px) {
+    text-decoration: underline;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: none;
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border: none;
+  background-color: rgb(254, 120, 101);
+
+  @media (min-width: 1920px) {
+    display: none;
+  }
+}

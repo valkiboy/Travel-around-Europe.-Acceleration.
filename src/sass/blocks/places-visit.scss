@@ -1,0 +1,241 @@
+.places-visit {
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 280px;
+}
+
+.places-visit__title {
+  margin: 0 auto 20px;
+  width: 288px;
+  min-height: 36px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  padding-top: 1px;
+
+  @media (min-width: 768px) {
+    font-size: 30px;
+    line-height: 45px;
+    width: 301px;
+    padding-top: 10px;
+    margin-bottom: 21px;
+  }
+
+  @media (min-width: 1920px) {
+    font-size: 55px;
+    line-height: 80px;
+    letter-spacing: -1px;
+    text-align: left;
+    width: 358px;
+    padding-right: 1020px;
+    padding-left: 207px;
+    position: relative;
+    margin-bottom: 64px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 4px;
+      width: 229px;
+      background: rgb(254, 120, 101);
+      top: 200px;
+      left: 207px;
+    }
+  }
+}
+
+.places-visit__paragraf {
+  margin: 0 0 19px 0;
+  padding: 0 16px 0;
+  text-align: center;
+  line-height: 28px;
+  letter-spacing: -0.5px;
+  opacity: 0.7;
+
+  @media (min-width: 768px) {
+    padding: 0 213px;
+    margin-bottom: 39px;
+  }
+
+  @media (min-width: 1920px) {
+    width: 328px;
+    padding: 0 991px 0 150px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    margin-bottom: 55px;
+  }
+}
+
+.places-visit__wrapper {
+  width: 288px;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    width: 616px;
+    margin-bottom: 51px;
+  }
+
+  @media (min-width: 1920px) {
+    width: 1170px;
+    margin-bottom: 25px;
+  }
+}
+
+.places-visit__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  @media (min-width: 1920px) {
+    justify-content: center;
+  }
+}
+
+.places-visit__list :nth-child(2n) {
+  @media (min-width: 768px) and (max-width: 1919px) {
+    margin-left: auto;
+  }
+}
+
+.places-visit__item {
+  position: relative;
+  margin-bottom: 35px;
+  height: 425px;
+  width: 288px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: 1920px) {
+    width: 350px;
+    height: 430px;
+    margin-bottom: 100px;
+  }
+}
+
+.places-visit__item a {
+  &::before {
+    @media (min-width: 1920px) {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgb(19, 20, 22);
+      opacity: 0;
+      z-index: 2;
+    }
+  }
+
+  &:hover::before {
+    @media (min-width: 1920px) {
+      opacity: 0.6;
+    }
+  }
+}
+
+.places-visit__item:nth-child(3n+1) {
+  @media (min-width: 1920px) {
+    margin-left: 0;
+    margin-right: 60px;
+  }
+}
+
+.places-visit__item:nth-child(3n+3) {
+  @media (min-width: 1920px) {
+    margin-right: 0;
+    margin-left: 60px;
+  }
+}
+
+.places-visit__item:last-child {
+  @media (min-width: 1920px) {
+    margin-left: 60px;
+  }
+}
+
+.places-visit__item--1 {
+  background-color: rgb(141, 223, 243);
+}
+
+.places-visit__item--2 {
+  background-color: rgb(65, 190, 190);
+}
+
+.places-visit__item--3 {
+  background-color: rgb(168, 233, 238);
+}
+
+.places-visit__item--4 {
+  background-color: rgb(108, 230, 92);
+}
+
+.places-visit__item--5 {
+  background-color: rgb(236, 217, 104);
+}
+
+.places-visit__item-title {
+  position: absolute;
+  margin: 0;
+  padding: 16px;
+  box-sizing: border-box;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  letter-spacing: -0.5px;
+  color: rgb(44, 46, 63);
+  bottom: 0;
+  left: 36px;
+  background-color: rgb(255, 255, 255);
+  width: 215px;
+  min-height: 61px;
+  word-break: break-all;
+
+  @media (min-width: 1920px) {
+    left: 68px;
+  }
+}
+
+.places-visit__more-detailed {
+  display: none;
+
+  @media (min-width: 1920px) {
+    position: absolute;
+    width: 266px;
+    height: 77px;
+    top: 151px;
+    left: 43px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    text-align: center;
+    box-sizing: border-box;
+    padding: 31px 10px 10px;
+    color: rgba(255, 255, 255, 1);
+    z-index: 3;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+}
+
+.places-visit__item:hover .places-visit__more-detailed {
+  @media (min-width: 1920px) {
+    display: block;
+  }
+}
