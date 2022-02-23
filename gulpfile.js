@@ -16,7 +16,7 @@ import browser from 'browser-sync';
 // Styles
 
 export const styles = () => {
-  return gulp.src('source/sass/style.scss', { sourcemaps: true })
+  return gulp.src('src/sass/style.scss', { sourcemaps: true })
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
@@ -32,14 +32,14 @@ export const styles = () => {
 // HTML
 
 const html = () => {
-  return gulp.src('source/*.html')
+  return gulp.src('src/*.html')
     .pipe(gulp.dest('build'));
 }
 
 // Scripts
 
 const scripts = () => {
-  return gulp.src('source/js/script.js')
+  return gulp.src('src/js/script.js')
     .pipe(terser())
     .pipe(rename("script.min.js"))
     .pipe(gulp.dest('build/js'))
@@ -49,20 +49,20 @@ const scripts = () => {
 // Images
 
 const optimizeImages = () => {
-  return gulp.src('source/img/**/*.{png,jpg}')
+  return gulp.src('src/img/**/*.{png,jpg}')
     .pipe(squoosh())
     .pipe(gulp.dest('build/img'))
 }
 
 const copyImages = () => {
-  return gulp.src('source/img/**/*.{png,jpg}')
+  return gulp.src('src/img/**/*.{png,jpg}')
     .pipe(gulp.dest('build/img'))
 }
 
 // WebP
 
 const createWebp = () => {
-  return gulp.src('source/img/**/*.{png,jpg}')
+  return gulp.src('src/img/**/*.{png,jpg}')
     .pipe(squoosh({
       webp: {}
     }))
@@ -72,12 +72,12 @@ const createWebp = () => {
 // SVG
 
 const svg = () =>
-  gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
+  gulp.src(['src/img/*.svg', '!src/img/icons/*.svg'])
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 
 const sprite = () => {
-  return gulp.src('source/img/icons/*.svg')
+  return gulp.src('src/img/icons/*.svg')
     .pipe(svgo())
     .pipe(svgstore({
       inlineSvg: true
@@ -90,10 +90,10 @@ const sprite = () => {
 
 const copy = (done) => {
   gulp.src([
-    'source/fonts/*.{woff2,woff}',
-    'source/*.ico',
+    'src/fonts/*.{woff2,woff}',
+    'src/*.ico',
   ], {
-    base: 'source'
+    base: 'src'
   })
     .pipe(gulp.dest('build'))
   done();
@@ -130,9 +130,9 @@ const reload = (done) => {
 // Watcher
 
 const watcher = () => {
-  gulp.watch('source/sass/**/*.scss', gulp.series(styles));
-  gulp.watch('source/js/script.js', gulp.series(scripts));
-  gulp.watch('source/*.html', gulp.series(html, reload));
+  gulp.watch('src/sass/**/*.scss', gulp.series(styles));
+  gulp.watch('src/js/script.js', gulp.series(scripts));
+  gulp.watch('src/*.html', gulp.series(html, reload));
 }
 
 // Build

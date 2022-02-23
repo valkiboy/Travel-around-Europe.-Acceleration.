@@ -1,0 +1,385 @@
+.description__wrap {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 1px;
+    width: 1920px;
+    background: rgb(44, 46, 63);
+    opacity: 0.3;
+    top: 44px;
+    left: 16px;
+
+    @media (min-width: 1920px) {
+      display: none;
+    }
+  }
+}
+
+.description__nav {
+  width: 288px;
+  overflow: scroll;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px 10px 0;
+
+  @media (min-width: 768px) {
+    width: 726px;
+    margin-bottom: 5px;
+  }
+
+  @media (min-width: 1920px) {
+    width: 900px;
+    margin-bottom: 64px;
+    overflow: visible;
+    padding: 0 540px 0 270px;
+  }
+}
+
+.description__nav::-webkit-scrollbar {
+  width: 0;
+}
+
+.description__nav-list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-height: 40px;
+  position: relative;
+
+  @media (min-width: 1920px) {
+    flex-wrap: wrap;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 1px;
+      width: 899px;
+      background: rgb(44, 46, 63);
+      opacity: 0.3;
+      top: 39px;
+      left: 0;
+    }
+  }
+}
+
+.description__nav-item:not(:last-child) {
+  margin-right: 101px;
+
+  @media (min-width: 1920px) {
+    margin-right: 98px;
+  }
+}
+
+.description__nav-item {
+  margin-bottom: 10px;
+  opacity: 0.3;
+}
+
+.description__nav-item a {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.5px;
+  color: rgb(44, 46, 63);
+}
+
+.description__nav-item--current {
+  opacity: 1;
+}
+
+.description__nav-item--current a {
+  color: rgb(254, 120, 101);
+}
+
+.description__wrapper {
+  display: none;
+}
+
+.description__wrapper--current {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 1920px) {
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    margin-bottom: 124px;
+  }
+}
+
+.description__title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+  margin: 0 0 20px;
+  position: relative;
+  padding-top: 7px;
+
+  @media (min-width: 768px) {
+    font-size: 30px;
+    line-height: 45px;
+    margin-bottom: 21px;
+  }
+
+  @media (min-width: 1920px) {
+    width: 425px;
+    font-size: 55px;
+    line-height: 90px;
+    letter-spacing: -1px;
+    text-align: left;
+    margin-bottom: 51px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 3px;
+      width: 175px;
+      background: rgb(254, 120, 101);
+      top: 114px;
+      left: 1px;
+    }
+  }
+}
+
+.description__paragraf {
+  line-height: 28px;
+  letter-spacing: -0.5px;
+  margin: 0 0 20px;
+  opacity: 0.7;
+
+  @media (min-width: 768px) {
+    padding: 0 5px;
+    margin-bottom: 19px;
+  }
+
+  @media (min-width: 1920px) {
+    width: 370px;
+    text-align: left;
+    padding: 0 5px 0 1px;
+    margin-bottom: 50px;
+  }
+}
+
+.description__country {
+  margin-bottom: 49px;
+  min-width: 288px;
+  text-align: center;
+  padding: 0 16px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: 1920px) {
+    padding-left: 14px;
+    margin-right: 30px;
+  }
+}
+
+.description__reviews {
+  margin-bottom: 110px;
+  height: 415px;
+
+  @media (min-width: 1920px) {
+    height: 596px;
+    width: 430px;
+  }
+}
+
+.description__reviews--1 {
+  background-color: rgb(141, 223, 243);
+  background-image: url("../img/reviews-greece-mobile.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/reviews-greece-mobile@2x.jpg");
+  }
+
+  @media (min-width: 768px) {
+    background-image: url("../img/greece-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/reviews-greece-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: 1920px) {
+    background-image: url("../img/greece-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/reviews-greece-desktop@2x.jpg");
+    }
+  }
+}
+
+.description__reviews--2 {
+  background-color: rgb(65, 190, 190);
+  background-image: url("../img/reviews-albania-desktop.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/reviews-albania-desktop@2x.jpg");
+  }
+}
+
+.description__reviews--3 {
+  background-color: rgb(168, 233, 238);
+  background-image: url("../img/reviews-macedonia-desktop.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/reviews-macedonia-desktop@2x.jpg");
+  }
+}
+
+.description__reviews--4 {
+  background-color: rgb(108, 230, 92);
+  background-image: url("../img/reviews-montenegro-desktop.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/reviews-montenegro-desktop@2x.jpg");
+  }
+}
+
+.description__reviews--5 {
+  background-color: rgb(236, 217, 104);
+  background-image: url("../img/reviews-croatia-desktop.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/reviews-croatia-desktop@2x.jpg");
+  }
+}
+
+.description__container {
+  width: 268px;
+  min-height: 431px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  transform: translateY(50px);
+
+  @media (min-width: 768px) {
+    width: 382px;
+    min-height: 367px;
+    text-align: left;
+    transform: translateY(22%);
+  }
+
+  @media (min-width: 1920px) {
+    transform: translateX(77%);
+    margin-top: 114px;
+  }
+}
+
+.description__title-reviews {
+  position: relative;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -1px;
+  margin: 0 0 32px;
+  padding: 32px 10px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 1px;
+    width: 68px;
+    background: rgb(254, 120, 101);
+    top: 67px;
+    left: 100px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 30px;
+    padding-left: 30px;
+    padding-top: 29px;
+    margin-bottom: 33px;
+    line-height: 37px;
+
+    &::before {
+      top: 78px;
+      left: 30px;
+    }
+  }
+}
+
+.description__autor-info {
+  display: flex;
+  flex-direction: column;
+  width: 228px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 322px;
+  }
+}
+
+.description__text {
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: -0.5px;
+  margin: 0 0 17px;
+  opacity: 0.7;
+
+  @media (min-width: 768px) {
+    margin-bottom: 31px;
+  }
+}
+
+.description__author-name {
+  position: relative;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.5px;
+  font-style: normal;
+  padding: 3px 0 0 7px;
+
+  @media (min-width: 768px) {
+    padding-top: 10px;
+    padding-left: 17px;
+  }
+}
+
+.description__author-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+}
+
+.description__button {
+  @media (min-width: 1920px) {
+    width: 250px;
+    min-height: 75px;
+    margin-left: 0;
+    padding-top: 30px;
+  }
+}

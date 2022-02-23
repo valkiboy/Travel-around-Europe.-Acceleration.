@@ -1,0 +1,65 @@
+.next-trips {
+  display: flex;
+  flex-wrap: wrap;
+  width: 288px;
+  justify-content: space-around;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(215, 217, 223, 1);
+  margin: 0 auto 9px;
+
+  @media (min-width: 768px) {
+    width: 396px;
+    text-align: left;
+    min-height: 196px;
+    justify-content: flex-start;
+  }
+
+  @media (min-width: 1920px) {
+    margin: 0;
+    border-bottom: none;
+    align-content: flex-start;
+    width: 386px;
+  }
+}
+
+.next-trips__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px;
+  width: 134px;
+  font-size: 14px;
+  line-height: 17px;
+
+  @media (min-width: 768px) {
+    width: 125px;
+    min-height: 100px;
+  }
+
+  @media (min-width: 1920px) {
+    padding-right: 3px;
+  }
+}
+
+.next-trips__title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 32px;
+  margin: 0 0 20px;
+  color: rgba(20, 21, 23, 1);
+
+  @media (min-width: 768px) {
+    width: 396px;
+    min-height: 32px;
+    margin-bottom: 18px;
+  }
+
+  @media (min-width: 1920px) {
+    padding-bottom: 4px;
+    margin-bottom: 18px;
+  }
+}
+
+.next-trips__item {
+  margin-bottom: 10px;
+  color: rgba(20, 21, 23, 0.5);
+}

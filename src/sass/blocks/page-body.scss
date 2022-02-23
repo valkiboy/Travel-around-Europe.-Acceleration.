@@ -6,9 +6,16 @@
   font-size: 16px;
   line-height: 27px;
   font-weight: 400;
-  color: #2C2E3F;
+  color: rgb(44, 46, 63);
   min-height: 100%;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
+  position: relative;
+
+  @media (min-width: 1920px) {
+    background-image: url("../img/countres.svg");
+    background-position: 237px 2697px;
+    background-repeat: no-repeat;
+  }
 }

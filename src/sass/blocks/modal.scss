@@ -1,0 +1,139 @@
+.modal {
+  position: relative;
+  width: 320px;
+  min-height: 568px;
+  background-color: rgba(255, 255, 255, 1);
+
+  @media (min-width: 768px) {
+    background-color: rgba(251, 248, 248, 1);
+    width: 720px;
+    min-height: 444px;
+  }
+
+  @media (min-width: 1920px) {
+    background-color: rgba(251, 248, 248, 1);
+    width: 728px;
+    min-height: 444px;
+  }
+}
+
+.modal__wrapper {
+  width: 288px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    width: 399px;
+  }
+}
+
+.modal__form {
+  @media (min-width: 768px) {
+    width: 386px;
+    margin-right: 0;
+  }
+
+  @media (min-width: 1920px) {
+    margin-left: 339px;
+  }
+}
+
+.modal__toggle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  z-index: 2;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+
+  @media (min-width: 768px) {
+    right: 21px;
+  }
+
+  @media (min-width: 1920px) {
+    right: 18px;
+  }
+}
+
+.modal__title {
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 43px;
+  padding: 80px 10px 0;
+  margin-bottom: 50px;
+  color: rgba(72, 73, 77, 1);
+
+  @media (min-width: 768px) {
+    padding-top: 52px;
+    padding-left: 6px;
+  }
+}
+
+.modal__text {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 43px;
+  padding: 179px 10px 0;
+  margin: 0;
+
+  @media (min-width: 768px) {
+    width: 399px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.modal--succes {
+  display: none;
+}
+
+.modal--send {
+  display: none;
+
+  @media (min-width: 768px) {
+    background-image: url("../img/modal-tablet.jpg");
+    background-size: 334px 444px;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/modal-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: 1920px) {
+    background-size: 338px 444px;
+  }
+}
+
+.modal--open {
+  display: block;
+}
+
+.modal__container {
+  @media (min-width: 768px) {
+    margin-left: 57px;
+  }
+}
+
+.modal__input {
+  @media (min-width: 768px) {
+    width: 266px;
+  }
+
+  @media (min-width: 1920px) {
+    width: 270px;
+  }
+}
+
+.modal__toggle--succes {
+  top: 20px;
+}
+
+.modal__container--succes {
+  margin-left: 0;
+}

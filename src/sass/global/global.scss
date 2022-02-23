@@ -1,5 +1,6 @@
 img {
-  max-width: 100%;
+  width: 100%;
+  height: auto;
 }
 
 a {
@@ -17,4 +18,11 @@ a {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+::placeholder {
+  color: rgba(20, 21, 23, 1);
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
 }

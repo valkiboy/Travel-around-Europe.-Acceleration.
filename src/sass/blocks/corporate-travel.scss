@@ -1,0 +1,42 @@
+.corporate-travel {
+  @media (min-width: 1920px) {
+    width: 330px;
+    text-align: left;
+    margin-left: 50px;
+  }
+}
+
+.corporate-travel__title {
+  margin: 0 0 20px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 32px;
+  color: rgba(20, 21, 23, 1);
+
+  @media (min-width: 768px) {
+    padding-top: 20px;
+  }
+
+  @media (min-width: 1920px) {
+    padding-top: 1px;
+    padding-left: 13px;
+  }
+}
+
+.corporate-travel__paragraf {
+  margin: 0 0 30px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgba(20, 21, 23, 0.5);
+  padding: 0 15px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: 1920px) {
+    width: 320px;
+    padding-left: 14px;
+  }
+}

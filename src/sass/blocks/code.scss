@@ -1,0 +1,16 @@
+.code {
+  position: absolute;
+  content: "";
+  width: 65px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  color: rgba(72, 73, 77, 1);
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+}
+
+.code sup {
+  color: rgba(254, 120, 101, 1);
+}

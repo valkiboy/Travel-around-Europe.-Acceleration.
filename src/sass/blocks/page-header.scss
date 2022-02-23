@@ -1,0 +1,151 @@
+.page-header {
+  position: relative;
+}
+
+.page-header--closed,
+.page-header--open {
+  @media (max-width: 1920px) {
+    min-height: 563px;
+  }
+}
+
+.page-header--closed .page-header__main-nav,
+.page-header--open .page-header__main-nav {
+  min-height: 50px;
+}
+
+.page-header--closed .page-header__list {
+  @media (max-width: 1919px) {
+    display: none;
+  }
+}
+
+.page-header--open .page-header__toggle,
+.page-header--closed .page-header__toggle {
+  display: block;
+
+  @media (min-width: 768px) {
+    top: 0;
+  }
+
+  @media (min-width: 1920px) {
+    display: none;
+  }
+}
+
+.page-header--closed .page-header__toggle::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 14px;
+  width: 23px;
+  height: 1px;
+  background-color: rgba(218, 218, 218, 1);
+  box-shadow: 0 6px 0 0 rgba(218, 218, 218, 1), 0 12px 0 0 rgba(218, 218, 218, 1);
+}
+
+.page-header--open .page-header__toggle {
+  width: 23px;
+  height: 23px;
+  background-color: rgba(255, 255, 255, 1);
+  top: 13px;
+  right: 17px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: rgba(20, 21, 23, 0.2);
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.page-header--open .page-header__nav-wrapper {
+  @media (max-width: 1919px) {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    min-height: 568px;
+    z-index: 3;
+    top: 0;
+    right: 0;
+  }
+
+  @media (min-width: 768px) {
+    width: 320px;
+    top: 0;
+    right: 0;
+  }
+}
+
+.page-header--open .page-header__promo {
+  margin-top: 50px;
+
+  @media (min-width: 1920px) {
+    margin-top: 0;
+  }
+}
+
+.page-header__logo-mobile {
+  display: none;
+}
+
+.page-header__logo-tablet {
+  display: none;
+}
+
+.page-header--closed .page-header__logo-mobile {
+  position: absolute;
+  display: block;
+  top: 19px;
+  left: 16px;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  @media (min-width: 1920px) {
+    display: none;
+  }
+}
+
+.page-header--closed .page-header__logo-tablet {
+  position: absolute;
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+    top: 17px;
+    left: 21px;
+  }
+
+  @media (min-width: 1920px) {
+    display: none;
+  }
+}
+
+.page-header__logo-desktop {
+  position: absolute;
+  display: none;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  @media (min-width: 1920px) {
+    display: block;
+    top: 39px;
+    left: 375px;
+  }
+}
