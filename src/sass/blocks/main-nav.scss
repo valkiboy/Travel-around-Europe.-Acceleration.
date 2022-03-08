@@ -130,6 +130,10 @@
   border: none;
   background-color: rgb(254, 120, 101);
 
+  @media (min-width: 768px) {
+    width: 72px;
+  }
+
   @media (min-width: 1920px) {
     display: none;
   }
