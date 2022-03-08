@@ -98,8 +98,8 @@
       <h2 class="places-visit__title" id="places-of-visit">Места посещения</h2>
       <p class="places-visit__paragraf">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
       <div class="places-visit__wrapper">
-        <ul class="places-visit__list">
-          <li class="places-visit__item places-visit__item--1">
+        <ul class="places-visit__list tabs">
+          <li class="places-visit__item places-visit__item--1 tab">
             <a href="#greece">
               <picture>
                 <source type="image/webp" media="(min-width: 1920px)"
@@ -117,7 +117,7 @@
               <p class="places-visit__more-detailed">Смотреть подробнее</p>
             </a>
           </li>
-          <li class="places-visit__item places-visit__item--2">
+          <li class="places-visit__item places-visit__item--2 tab">
             <a href="#albania">
               <picture>
                 <source type="image/webp" media="(min-width: 1920px)"
@@ -135,7 +135,7 @@
               <p class="places-visit__more-detailed">Смотреть подробнее</p>
             </a>
           </li>
-          <li class="places-visit__item places-visit__item--3">
+          <li class="places-visit__item places-visit__item--3 tab">
             <a href="#macedonia">
               <picture>
                 <source type="image/webp" media="(min-width: 1920px)"
@@ -154,7 +154,7 @@
               <p class="places-visit__more-detailed">Смотреть подробнее</p>
             </a>
           </li>
-          <li class="places-visit__item places-visit__item--4">
+          <li class="places-visit__item places-visit__item--4 tab">
             <a href="#montenegro">
               <picture>
                 <source type="image/webp" media="(min-width: 1920px)"
@@ -174,7 +174,7 @@
               <p class="places-visit__more-detailed">Смотреть подробнее</p>
             </a>
           </li>
-          <li class="places-visit__item places-visit__item--5">
+          <li class="places-visit__item places-visit__item--5 tab">
             <a href="#croatia">
               <picture>
                 <source type="image/webp" media="(min-width: 1920px)"
@@ -201,12 +201,12 @@
         <div class="description__nav">
           <ul class="description__nav-list">
             <li class="description__nav-item description__nav-item--1 description__nav-item--current">
-              <a href="" id="greece">Греция</a>
+              <a id="greece">Греция</a>
             </li>
-            <li class="description__nav-item description__nav-item--2"><a href="" id="albania">Албания</a></li>
-            <li class="description__nav-item description__nav-item--3"><a href="" id="macedonia">Македония</a></li>
-            <li class="description__nav-item description__nav-item--4"><a href="" id="montenegro">Черногория</a></li>
-            <li class="description__nav-item description__nav-item--5"><a href="" id="croatia">Хорватия</a></li>
+            <li class="description__nav-item description__nav-item--2"><a id="albania">Албания</a></li>
+            <li class="description__nav-item description__nav-item--3"><a id="macedonia">Македония</a></li>
+            <li class="description__nav-item description__nav-item--4"><a id="montenegro">Черногория</a></li>
+            <li class="description__nav-item description__nav-item--5"><a id="croatia">Хорватия</a></li>
           </ul>
         </div>
         <div class="description__wrapper description__wrapper--current">
@@ -420,11 +420,11 @@
         <div class="questions__wrap">
           <h2 class="questions__title">У Вас остались вопросы?</h2>
           <p class="questions__paragraf">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
-          <form class="questions__form form">
+          <form class="questions__form form" method="post" action="https://24.javascript.pages.academy/kekstagram" method="get" autocomplete="off">
             <div class="questions__container questions__container--id form__container">
               <label class="questions__label form__label" for="telephone"><span
                   class="code"><sup>*</sup>+7</span></label>
-              <input class="questions__input form__input form__input--error" type="tel" id="telephone" name="telephone"
+              <input class="questions__input form__input form__input--phone form__input--error" type="tel" id="telephone" name="telephone"
                 placeholder="Введите 10 цифр номера" pattern="^([0-9]+)$" required>
               <div class="form__error form__error--phone">Данные не верны</div>
             </div>
@@ -486,13 +486,13 @@
 
   <div class="overlay">
     <div class="modal modal--send pop-up">
-      <form class="modal__form form modal__wrapper">
-        <button class="modal__toggle toggle toggle--close" type="button"><span class="visually-hidden">Закрыть
+      <form class="modal__form form modal__wrapper" method="post" action="https://24.javascript.pages.academy/kekstagram" method="get" autocomplete="off">
+        <button class="modal__toggle modal__toggle--buy toggle toggle--close" type="button"><span class="visually-hidden">Закрыть
             меню</span></button>
         <h2 class="modal__title">Купить тур </h2>
         <div class="modal__container form__container">
           <label class="modal__label form__label" for="telephone-modal"><span class="code"><sup>*</sup>+7</span></label>
-          <input class="modal__input form__input form__input--error" type="tel" id="telephone-modal"
+          <input class="modal__input form__input form__input--phone form__input--error" type="tel" id="telephone-modal"
             name="telephone-modal" placeholder="Введите 10 цифр номера" pattern="^([0-9]+)$" required>
           <div class="form__error form__error--phone">Данные не верны</div>
         </div>
